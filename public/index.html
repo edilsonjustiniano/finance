@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="FinanceApp">
+<head>
+    <meta charset="utf-8">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="vendor/Materialize/dist/css/materialize.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Finance - Controll </title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo right">Finance</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#/payments"><i class="material-icons left">view_list</i>Payments</a></li>
+                <li><a href="#/payments"><i class="material-icons left">view_list</i>To receive</a></li>
+                <li><a href="#/payments"><i class="material-icons left">credit_card</i>Credit card</a></li>
+                <li><a href="#/payments"><i class="material-icons left">info_outline</i>Status</a></li>
+                <li><a href="#/payment"><i class="material-icons left">settings</i>Settings</a></li>            
+            </ul>
+        </div>
+    </nav>
+    <div ng-view></div>
+
+    <!-- Materialize Lib dependenvies -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/Materialize/dist/js/materialize.js"></script>
+
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/paymentList.js"></script>
+    <script src="js/controllers/payment.js"></script>
+
+</body>
+</html>
