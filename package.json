@@ -1,0 +1,30 @@
+{
+  "name": "finance",
+  "version": "1.0.0",
+  "description": "App developed to learning proposites and the self financial control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edilsonjustiniano/finance.git"
+  },
+  "keywords": [
+    "fincance"
+  ],
+  "author": "Edilson Justiniano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edilsonjustiniano/finance/issues"
+  },
+  "homepage": "https://github.com/edilsonjustiniano/finance#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "express-load": "^1.1.15",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.7"
+  }
+}

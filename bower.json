@@ -1,0 +1,26 @@
+{
+  "name": "fincance",
+  "description": "App developed to learning proposites and the self financial control",
+  "main": "index.js",
+  "authors": [
+    "Edilson Justiniano"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "fincance"
+  ],
+  "homepage": "https://github.com/edilsonjustiniano/finance",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "Materialize": "materialize#~0.97.5"
+  }
+}
