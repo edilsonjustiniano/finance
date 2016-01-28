@@ -21,6 +21,8 @@
   "dependencies": {
     "angular": "~1.4.9",
     "angular-route": "~1.4.9",
-    "Materialize": "materialize#~0.97.5"
+    "Materialize": "materialize#~0.97.5",
+    "lodash": "3.10.1",
+    "restangular": "^1.5.1"
   }
 }

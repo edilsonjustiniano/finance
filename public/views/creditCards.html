@@ -1,0 +1,30 @@
+<div id="content">
+  <h5>Credit Cards</h5>
+  <div class="actionButtonList">
+    <a class="btn-floating btn-large waves-effect waves-light green" href="#/creditCard">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+  <table class="bordered highlight centered">
+    <thead>
+      <tr>
+        <th data-field="name">Bank</th>
+        <th data-field="name">Flag</th>
+        <th data-field="number">Payment Day</th>
+        <th data-field="action">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="card in creditCards">
+        <td>{{card.bank}}</td>
+        <td>{{card.flag}}</td>
+        <td>{{card.paymentDay}}</td>
+        <td>
+          <span ng-click="update(card)"><i class="small material-icons">reorder</i></span>
+          <span ng-click="delete(card)"><i class="small material-icons">delete</i></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="row">
+  <form class="col s12" ng-submit="saveCreditCard()">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="bank" type="text" class="validate" ng-model="creditCard.bank">
+        <label for="bank">Bank</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="flag" type="text" class="validate" ng-model="creditCard.flag">
+        <label for="flag">Flag</label>
+      </div>
+    </div>
+
+    <div class="input-field col s6">
+      <select ng-model="creditCard.paymentDay">
+        <option value="" disabled selected>Choose the better day for you</option>
+        <option ng-repeat="day in days">{{day}}</option>
+      </select>
+      <label>Payment Day</label>
+    </div>
+
+    <div class="input-field col s6">
+      <select ng-model="creditCard.closingDay">
+        <option value="" disabled selected>Choose the better day for you</option>
+        <option ng-repeat="day in days">{{day}}</option>
+      </select>
+      <label>Closing Day</label>
+    </div>
+
+    <div class="formActionButtons">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Save
+        <i class="material-icons right">send</i>
+      </button>
+      <button class="btn waves-effect waves-light red" ng-click="cancel()">Cancel
+        <i class="material-icons right">cancel</i>
+      </button>
+    </div>
+  </form>
+</div>

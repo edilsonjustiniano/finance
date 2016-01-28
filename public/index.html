@@ -6,6 +6,11 @@
     <link type="text/css" rel="stylesheet" href="vendor/Materialize/dist/css/materialize.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--Finance Styles -->
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/form.css" />
+    <link type="text/css" rel="stylesheet" href="css/list.css" />
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Finance - Controll </title>
@@ -18,9 +23,9 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="#/payments"><i class="material-icons left">view_list</i>Payments</a></li>
                 <li><a href="#/payments"><i class="material-icons left">view_list</i>To receive</a></li>
-                <li><a href="#/payments"><i class="material-icons left">credit_card</i>Credit card</a></li>
+                <li><a href="#/creditCards"><i class="material-icons left">credit_card</i>Credit card</a></li>
                 <li><a href="#/payments"><i class="material-icons left">info_outline</i>Status</a></li>
-                <li><a href="#/payment"><i class="material-icons left">settings</i>Settings</a></li>            
+                <li><a href="#/payment"><i class="material-icons left">settings</i>Settings</a></li>
             </ul>
         </div>
     </nav>
@@ -32,9 +37,25 @@
 
     <script src="vendor/angular/angular.js"></script>
     <script src="vendor/angular-route/angular-route.js"></script>
+
+    <!--Lodash and Restangular-->
+    <script src="vendor/lodash/lodash.js"></script>
+    <script src="vendor/restangular/src/restangular.js"></script>
+
     <script src="js/app.js"></script>
+
+    <!-- Rest Services -->
+    <script src="js/rest/creditCardRest.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/creditCard.js"></script>
+
+    <!-- Controllers -->
     <script src="js/controllers/paymentList.js"></script>
     <script src="js/controllers/payment.js"></script>
+    <script src="js/controllers/creditCardList.js"></script>
+    <script src="js/controllers/creditCard.js"></script>
+
 
 </body>
 </html>
