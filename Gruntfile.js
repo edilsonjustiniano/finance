@@ -1,0 +1,45 @@
+module.exports = function(grunt) {
+
+    // Define the tasks to run
+    grunt.initConfig({
+        copy : {
+            // Task's configuration
+            project: {
+                expand: true,
+                cwd: '.',
+                src: ['**', '!Gruntfile.js', '!package.json', '!public/bower.json'],
+                dest: 'dist'
+            }
+        },
+        clean : {
+            dist: {
+                src: 'dist'
+            }
+        },
+        usemin: {
+            html: 'dist/app/views/**/*.ejs'
+        },
+        useminPrepare: {
+            options: {
+                root: 'dist/public',
+                dest: 'dist/public'
+            },
+            html: 'dist/app/views/**/*.ejs'
+        }
+    });
+
+    // Define the command grunt DEFAULT as the same of grunt dist
+    grunt.registerTask('default', ['dist'/*, 'minify'*/]);
+    // Create a kind of shortcut to register a task
+    grunt.registerTask('dist', ['clean', 'copy']);
+
+    //Minify Tasks
+    //grunt.registerTask('minify', ['useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
+
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-usemin');
+};

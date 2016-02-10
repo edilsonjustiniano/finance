@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8">
     <!--Import materialize.css-->
+    <!-- build:css css/index.lib.min.css -->
     <link type="text/css" rel="stylesheet" href="vendor/Materialize/dist/css/materialize.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- endbuild  -->
 
     <!--Finance Styles -->
+    <!-- build:css index.min.css -->
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/form.css" />
     <link type="text/css" rel="stylesheet" href="css/list.css" />
+    <!-- endbuild -->
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,17 +37,22 @@
         <div ui-view></div>
     </div>
     <!-- Materialize Lib dependenvies -->
+    <!-- build:js js/index.materialize.min.js -->
     <script src="vendor/jquery/dist/jquery.js"></script>
     <script src="vendor/Materialize/dist/js/materialize.js"></script>
+    <!-- endbuild -->
 
+    <!-- build:js js/index.angular.min.js -->
     <script src="vendor/angular/angular.js"></script>
 
     <!--Lodash and Restangular-->
     <script src="vendor/lodash/lodash.js"></script>
     <script src="vendor/restangular/src/restangular.js"></script>
-
-    <script src="js/app.js"></script>
     <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/index.min.js -->
+    <script src="js/app.js"></script>
     <script src="js/config/urlProvider.js"></script>
 
     <!-- Rest Services -->
@@ -57,7 +66,7 @@
     <script src="js/controllers/payment.js"></script>
     <script src="js/controllers/creditCardList.js"></script>
     <script src="js/controllers/creditCard.js"></script>
-
+    <!-- endbuild -->
 
 </body>
 </html>
