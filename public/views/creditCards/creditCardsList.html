@@ -1,7 +1,6 @@
-<div id="content">
-  <h5>Credit Cards</h5>
+<h5>Credit Cards</h5>
   <div class="actionButtonList">
-    <a class="btn-floating btn-large waves-effect waves-light green" href="#/creditCard">
+    <a ui-sref="creditCardAdd" class="btn-floating btn-large waves-effect waves-light green">
       <i class="material-icons">add</i>
     </a>
   </div>
@@ -21,7 +20,7 @@
         <td>{{card.flag}}</td>
         <td>{{card.paymentDay}}</td>
         <td>
-          <span ng-click="update(card)"><i class="small material-icons">reorder</i></span>
+          <span ui-sref="creditCardUpdate({creditCard: {{card}} })"><i class="small material-icons">reorder</i></span>
           <span ng-click="delete(card)"><i class="small material-icons">delete</i></span>
         </td>
       </tr>

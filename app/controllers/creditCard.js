@@ -28,5 +28,21 @@ module.exports = function(app) {
         );
     };
 
+    controller.getCreditCard = function(req, res) {
+        var id = req.params.id;
+        CreditCard.findById(id).exec().then(
+            function(data) {
+                if (!data) {
+                    throw new Error('Credit card not found');
+                }
+                res.json(data);
+            },
+            function(error) {
+                console.log(error);
+                res.status(404).json(error);
+            }
+        )
+    };
+
     return controller;
 };

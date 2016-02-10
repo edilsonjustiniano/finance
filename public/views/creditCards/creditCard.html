@@ -12,17 +12,13 @@
     </div>
 
     <div class="input-field col s6">
-      <select ng-model="creditCard.paymentDay">
-        <option value="" disabled selected>Choose the better day for you</option>
-        <option ng-repeat="day in days">{{day}}</option>
+      <select ng-model="creditCard.paymentDay" ng-options="dia as day.day for day in days">
       </select>
       <label>Payment Day</label>
     </div>
 
     <div class="input-field col s6">
-      <select ng-model="creditCard.closingDay">
-        <option value="" disabled selected>Choose the better day for you</option>
-        <option ng-repeat="day in days">{{day}}</option>
+      <select ng-model="creditCard.closingDay" ng-options="dia as day.day for day in days">
       </select>
       <label>Closing Day</label>
     </div>

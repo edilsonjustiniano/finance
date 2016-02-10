@@ -1,4 +1,5 @@
-angular.module('FinanceApp').factory('CreditCardRestService', ['Restangular', function(Restangular){
+angular.module('FinanceApp')
+.factory('CreditCardRestService', ['Restangular', function(Restangular){
 
     var basePath = '/creditCard';
     var service = {
@@ -9,6 +10,9 @@ angular.module('FinanceApp').factory('CreditCardRestService', ['Restangular', fu
         },
         save: function(creditCard) {
             return Restangular.one(basePath).customPOST(creditCard);
+        },
+        get: function(creditCardId) {
+            return Restangular.one(basePath + '/' + creditCardId).get();
         }
     };
 

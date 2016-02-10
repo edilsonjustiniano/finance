@@ -4,6 +4,8 @@ module.exports = function(app) {
     .get(controller.findAll)
     .post(controller.save);
 
+    app.route('/creditCard/:id').
+    get(controller.getCreditCard);
     // app.route('/contatos/:id')
     // .get(controller.obtemContato)
     // .delete(controller.removeContato);

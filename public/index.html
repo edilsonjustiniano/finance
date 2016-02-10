@@ -21,28 +21,30 @@
         <div class="nav-wrapper blue">
             <a href="#" class="brand-logo right">Finance</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#/payments"><i class="material-icons left">view_list</i>Payments</a></li>
+                <li><a ui-sref="payments"><i class="material-icons left">view_list</i>Payments</a></li>
                 <li><a href="#/payments"><i class="material-icons left">view_list</i>To receive</a></li>
-                <li><a href="#/creditCards"><i class="material-icons left">credit_card</i>Credit card</a></li>
+                <li><a ui-sref="creditCardsList"><i class="material-icons left">credit_card</i>Credit card</a></li>
                 <li><a href="#/payments"><i class="material-icons left">info_outline</i>Status</a></li>
                 <li><a href="#/payment"><i class="material-icons left">settings</i>Settings</a></li>
             </ul>
         </div>
     </nav>
-    <div ng-view></div>
-
+    <div id="content">
+        <div ui-view></div>
+    </div>
     <!-- Materialize Lib dependenvies -->
     <script src="vendor/jquery/dist/jquery.js"></script>
     <script src="vendor/Materialize/dist/js/materialize.js"></script>
 
     <script src="vendor/angular/angular.js"></script>
-    <script src="vendor/angular-route/angular-route.js"></script>
 
     <!--Lodash and Restangular-->
     <script src="vendor/lodash/lodash.js"></script>
     <script src="vendor/restangular/src/restangular.js"></script>
 
     <script src="js/app.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/config/urlProvider.js"></script>
 
     <!-- Rest Services -->
     <script src="js/rest/creditCardRest.js"></script>

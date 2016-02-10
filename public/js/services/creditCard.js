@@ -11,5 +11,9 @@ angular.module('FinanceApp')
         return CreditCardRestService.save(creditCard);
     };
 
+    service.get = function(creditCardId) {
+        return CreditCardRestService.get(creditCardId);
+    }
+
     return service;
 }])
