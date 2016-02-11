@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '..',
+    basePath: './',
 
 
     // frameworks to use
@@ -17,11 +17,14 @@ module.exports = function(config) {
     files: [
         '../public/vendor/angular/angular.js',
         '../public/vendor/angular-mocks/angular-mocks.js',
-        '../public/vendor/angular-route/angular-route.js',
+        '../public/vendor/angular-ui-router/release/angular-ui-router.js',
+        '../public/vendor/lodash/lodash.js',
+        '../public/vendor/restangular/src/restangular.js',
         '../public/js/app.js',
-        '../public/js/controllers/**/*.js',
+        '../public/js/rest/**/*.js',
         '../public/js/services/**/*.js',
-        'test/**/**/*Spec.js'
+        '../public/js/controllers/**/*.js',
+        '../test/**/**/*Spec.js'
     ],
 
 
