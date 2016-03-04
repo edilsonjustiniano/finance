@@ -1,4 +1,4 @@
-angular.module('FinanceApp', ['restangular', 'ui.router'])
+angular.module('FinanceApp', ['restangular', 'ui.router', 'ngToast'])
 .config(['RestangularProvider', function(RestangularProvider) {
     // $routeProvider.when('/payments', {
     //     templateUrl: 'views/paymentList.html',

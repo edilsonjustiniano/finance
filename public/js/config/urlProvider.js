@@ -11,13 +11,27 @@ angular.module('FinanceApp')
     })
     .state('creditCardsList', {
         url: '/creditCards',
-        templateUrl:'../../views/creditCards/creditCardsList.html',
-        controller: 'CreditCardListController'
+        views: {
+            'navigator': {
+                templateUrl: '../../nav.html'
+            },
+            'main': {
+                templateUrl:'../../views/creditCards/creditCardsList.html',
+                controller: 'CreditCardListController'
+            }
+        }
     })
-    .state('creditCardAdd', {
-        url: '/creditCard/add',
-        templateUrl: '../../views/creditCards/creditCard.html',
-        controller: 'CreditCardController',
+    .state('creditCardsList.add', {
+        url: '/add',
+        views: {
+            'navigator': {
+                templateUrl: '../../nav.html'
+            },
+            'main@': {
+                templateUrl: '../../views/creditCards/creditCard.html',
+                controller: 'CreditCardController'
+            }
+        },
         params: {
             creditCard: undefined
         },
@@ -29,8 +43,15 @@ angular.module('FinanceApp')
     })
     .state('creditCardUpdate', {
         url: '/creditCard/edit',
-        templateUrl: '../../views/creditCards/creditCard.html',
-        controller: 'CreditCardController',
+        views: {
+            'navigator': {
+                templateUrl: '../../nav.html'
+            },
+            'main@': {
+                templateUrl: '../../views/creditCards/creditCard.html',
+                controller: 'CreditCardController'
+            }
+        },
         params: {
             creditCard: null
         },
